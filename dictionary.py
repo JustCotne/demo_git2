@@ -6,11 +6,19 @@ def modzebna():
         dictionary = json.load(file)
         word= input("sheiyvanet sityva: ").lower()
         if word in dictionary:
-            print(f'{word} - {dictionary[word]}')
+            parint(f'{word} - {dictionary[word]}')
             
-        
+       
 
 def damateba():
+    with open('data.json',"r") as file:
+            dictionary = json.load(file)
+    key= input("romeli sityvis washla gsurt: ")
+    if key in dictionary:
+        with open('data.json',"w") as file:
+                pass
+
+
 
 
 def washla():
