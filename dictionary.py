@@ -11,16 +11,7 @@ def modzebna():
         
 
 def damateba():
-    with open('data.json',"r") as file:
-        dictionary = json.load(file)
-    key= input("sityva: ")
-    if key not in dictionary:
-        with open('data.json',"w") as file:
-            value=input("ganmarteba: ")
-            dictionary[key]=value
-            json.dump(dictionary,file,indent=2)
-    else:
-        print("aseti sityva ukve arsebobs.")
+
 
 def washla():
     with open('data.json',"r") as file:
