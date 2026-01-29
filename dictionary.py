@@ -7,21 +7,8 @@ def modzebna():
         word= input("sheiyvanet sityva: ").lower()
         if word in dictionary:
             print(f'{word} - {dictionary[word]}')
-        else:
-            matches= difflib.get_close_matches(word,dictionary.keys(),1,0.6)
-            if len(matches) != 0: 
-                while True:
-                    match_choose = input(f'"{matches[0]}" - am sityvas xom ar gulisxmobdit? (y/n): ').lower()
-                    if match_choose == "y":
-                        print(f'{matches[0]} - {dictionary[matches[0]]}')
-                        break
-                    elif match_choose =="n":
-                        print("tqven mier sheyvanili sityva ver moidzebna!!!")
-                        break
-                    else:
-                        print("archevani arasworea!!!")
-            else:
-                print("tqven mier sheyvanili sityva ver moidzebna!!!") 
+            
+        
 
 def damateba():
     with open('data.json',"r") as file:
